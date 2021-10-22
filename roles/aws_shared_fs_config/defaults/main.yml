@@ -1,5 +1,5 @@
 ---
-efs_target: "{{ atl_efs_id }}"
+efs_target: "{{ atl_efs_id or 'fs-0f5b1a6c0ba244f6e' }}"
 efs_type: "{{ lookup('env', 'ATL_EFS_TYPE') or 'efs' }}"
 efs_src_dir: "{{ lookup('env', 'ATL_EFS_SRC_DIR') or '/' }}"
 efs_mount_options: "{{ lookup('env', 'ATL_EFS_MOUNT_OPTIONS') or 'defaults,_netdev' }}"

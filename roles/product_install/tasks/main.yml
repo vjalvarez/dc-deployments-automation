@@ -29,13 +29,13 @@
                            atl_product_version == 'latest' }}"
 
 # Case: File doesn't exist and no version has been set; find latest.
-- name: Fetch and cache latest version when no override
-  block:
-
-    - name: Fetch the latest edition version
-      include_tasks: "{{ atl_product_edition }}_version_latest.yml"
-
-  when: not cached.stat.exists and version_is_latest
+#- name: Fetch and cache latest version when no override
+#  block:
+#
+#    - name: Fetch the latest edition version
+#      include_tasks: "{{ atl_product_edition }}_version_latest.yml"
+#
+#  when: not cached.stat.exists and version_is_latest
 
 
 ######################################################################
